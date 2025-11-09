@@ -1,4 +1,4 @@
-# DATA-CHALLENGE-APPRENTISSAGE-SUPERVISÉ
+# DATA CHALLENGE APPRENTISSAGE SUPERVISÉ
 Il s'agit de deux data challenges qu'on a fait dans la matière d'apprentissage supervisé avancé dans le Master M2 Mathématiques et Intelligence Artificielle à l'Université Paris-Saclay. En général, il n'a pas été nécessaire de faire la partie de nettoyage des données car les données étaient déjà préparées car l'objectif de ces data challenge étaient surtout travailler avec des nouveaux modèles prédictifs et apprendre à les utiliser.
 
 Le premier data challenge est un problème de classification:
