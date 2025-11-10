@@ -78,13 +78,13 @@ python predict_stacking.py
 cd regression/
 
 # 1. Entraîner les modèles de base (L0)
-python train_base_models.py
+python train.py
 
 # 2. Entraîner le méta-modèle (L1)
-python train_meta_model.py
+python train_stack.py
 
 # 3. Générer les prédictions finales
-python predict_stacking.py
+python predict_stack.py
 ```
 
 **Sortie** : `submission.csv` contenant les prédictions de popularité
