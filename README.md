@@ -22,13 +22,13 @@ Dans le secteur hôtelier, les annulations et les no-show entraînent des pertes
 - **2** : No-Show (client ne s'est pas présenté)
 
 
-## 🎵 Challenge 2 : Régression de la popularité Spotify
+## Challenge 2 : Régression de la popularité Spotify
 
 ### Problématique
 
 L'industrie musicale cherche à comprendre les facteurs de popularité d'un titre. L'objectif est de prédire la popularité Spotify (0-100) à partir des caractéristiques audio et métadonnées.
 
-## 🔧 Installation
+## Installation
 
 ### Prérequis
 
@@ -108,6 +108,7 @@ LGBM_PARAMS = {
 ```
 ## Structure du projet 
 
+```
 DATA-CHALLENGE-APPRENTISSAGE-SUPERVIS-/
 │
 ├── classification/
@@ -140,7 +141,7 @@ DATA-CHALLENGE-APPRENTISSAGE-SUPERVIS-/
 ├── rapport.pdf                    # Rapport détaillé (méthodologie + résultats)
 ├── requirements.txt
 └── README.md
-
+```
 
 ## Auteurs
 
@@ -153,7 +154,7 @@ DATA-CHALLENGE-APPRENTISSAGE-SUPERVIS-/
 **Cours** : Apprentissage Supervisé et Data Challenge  
 **Date** : Novembre 2025
 
-## 📚 Références
+## Références
 
 - Ke et al. (2017). *LightGBM: A Highly Efficient Gradient Boosting Decision Tree*. NeurIPS.
 - Prokhorenkova et al. (2018). *CatBoost: unbiased boosting with categorical features*. NeurIPS.
