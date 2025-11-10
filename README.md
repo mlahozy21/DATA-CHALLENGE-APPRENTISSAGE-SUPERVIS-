@@ -108,32 +108,31 @@ LGBM_PARAMS = {
 DATA-CHALLENGE-APPRENTISSAGE-SUPERVIS-/
 │
 ├── classification/
-│   ├── data/
-│   │   ├── train_data.csv
-│   │   ├── test_data.csv
-│   │   └── naive_submission.csv
+│   ├── data/                      # Données d'entraînement et test (non inclus dans git)
 │   ├── models/                    # Modèles entraînés (créé automatiquement)
 │   ├── processed/                 # Données pré-traitées (créé automatiquement)
+│   ├── README_CLASSIFICATION.md   # Documentation spécifique au challenge
 │   ├── train_base_models.py      # Entraînement des modèles L0
 │   ├── train_meta_model.py       # Entraînement du méta-modèle L1
 │   ├── predict_stacking.py       # Génération des prédictions finales
 │   ├── data_loader.py            # Chargement et nettoyage des données
 │   ├── feature_engineering.py    # Création de features
-│   ├── models.py                 # Définitions des modèles
 │   └── config.py                 # Configuration et hyperparamètres
 │
 ├── regression/
-│   ├── data/
-│   ├── models/
-│   ├── processed/
-│   ├── train_base_models.py
-│   ├── train_meta_model.py
-│   ├── predict_stacking.py
-│   ├── data_loader.py
-│   ├── feature_engineering.py
-│   ├── models.py
-│   └── config.py
-│└── README.md
+│   ├── data/                      # Données d'entraînement et test (non inclus dans git)
+│   ├── modelsregression/          # Modèles entraînés (créé automatiquement)
+│   ├── processedregression/       # Données pré-traitées (créé automatiquement)
+│   ├── README_REGRESSION.md       # Documentation spécifique au challenge
+│   ├── train.py                   # Entraînement des modèles L0
+│   ├── train_stack.py             # Entraînement du méta-modèle L1
+│   ├── predict_stack.py           # Génération des prédictions finales
+│   ├── load_data.py               # Chargement des données
+│   ├── models.py                  # Définitions des modèles
+│   ├── funciones.py               # Fonctions utilitaires
+│   ├── cache_functions.py         # Gestion du cache
+│   └── config.py                  # Configuration et hyperparamètres
+└── README.md
 ```
 
 ## Auteurs
