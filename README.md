@@ -1,12 +1,134 @@
-# DATA CHALLENGE APPRENTISSAGE SUPERVISÉ
-Il s'agit de deux data challenges qu'on a fait dans la matière d'apprentissage supervisé avancé dans le Master M2 Mathématiques et Intelligence Artificielle à l'Université Paris-Saclay. En général, il n'a pas été nécessaire de faire la partie de nettoyage des données car les données étaient déjà préparées car l'objectif de ces data challenge étaient surtout travailler avec des nouveaux modèles prédictifs et apprendre à les utiliser.
+# Data Challenge - Apprentissage Supervisé 🎯
 
-Le premier data challenge est un problème de classification:
-Dans le secteur hôtelier, la gestion des réservations est un enjeu majeur. Les annulations et les "no-show" (clients ne se présentant pas) entraînent des pertes financières et une mauvaise allocation des ressources. L’objectif de ce challenge est de construire un modèle d’apprentissage supervisé capable de prédire le statut final d’une réservation :
-Check-out (0)
-Cancel (1)
-No-Show (2)
+Projet réalisé dans le cadre du cours **Apprentissage Supervisé Avancé** du Master M2 Mathématiques et Intelligence Artificielle à l'Université Paris-Saclay (2025).
 
-Le seconde data challenge est un problème de régression:
-L'industrie musicale est en constante évolution, et comprendre ce qui rend un titre populaire est un enjeu majeur pour les artistes, les producteurs et les plateformes de streaming. L'objectif de ce challenge est de développer un modèle capable de prédire la popularité d'un titre musical sur Spotify, en se basant sur ses caractéristiques audio et ses métadonnées.
-Objectif : Prédire la variable popularity (une note de 0 à 100) à partir des caractéristiques audio et des métadonnées des titres.
+## 📋 Table des matières
+
+- [Vue d'ensemble](#vue-densemble)
+- [Challenge 1 : Classification des réservations hôtelières](#challenge-1--classification-des-réservations-hôtelières)
+- [Challenge 2 : Régression de la popularité Spotify](#challenge-2--régression-de-la-popularité-spotify)
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+- [Résultats](#résultats)
+- [Structure du projet](#structure-du-projet)
+- [Auteurs](#auteurs)
+
+## Challenge 1 : Classification des réservations hôtelières
+
+### Problématique
+
+Dans le secteur hôtelier, les annulations et les no-show entraînent des pertes financières importantes. L'objectif est de prédire le statut final d'une réservation parmi 3 catégories :
+
+- **0** : Check-out (client s'est présenté)
+- **1** : Cancel (réservation annulée)
+- **2** : No-Show (client ne s'est pas présenté)
+
+
+## 🎵 Challenge 2 : Régression de la popularité Spotify
+
+### Problématique
+
+L'industrie musicale cherche à comprendre les facteurs de popularité d'un titre. L'objectif est de prédire la popularité Spotify (0-100) à partir des caractéristiques audio et métadonnées.
+
+## 🔧 Installation
+
+### Prérequis
+
+- Python 3.8+
+- pip ou conda
+
+### Installation des dépendances
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/mlahozy21/DATA-CHALLENGE-APPRENTISSAGE-SUPERVIS-.git
+cd DATA-CHALLENGE-APPRENTISSAGE-SUPERVIS-
+
+# Installer les dépendances
+pip install -r requirements.txt
+```
+
+### Dépendances principales
+
+```
+numpy>=1.21.0
+pandas>=1.3.0
+scikit-learn>=1.0.0
+lightgbm>=3.3.0
+catboost>=1.0.0
+joblib>=1.1.0
+```
+
+## Utilisation
+
+### Challenge 1 : Classification
+
+```bash
+cd classification/
+
+# 1. Entraîner les modèles de base (L0)
+python train_base_models.py
+
+# 2. Entraîner le méta-modèle (L1)
+python train_meta_model.py
+
+# 3. Générer les prédictions finales
+python predict_stacking.py
+```
+
+**Sortie** : `submission.csv` contenant les prédictions pour l'ensemble de test
+
+### Challenge 2 : Régression
+
+```bash
+cd regression/
+
+# 1. Entraîner les modèles de base (L0)
+python train_base_models.py
+
+# 2. Entraîner le méta-modèle (L1)
+python train_meta_model.py
+
+# 3. Générer les prédictions finales
+python predict_stacking.py
+```
+
+**Sortie** : `submission.csv` contenant les prédictions de popularité
+
+### Configuration personnalisée
+
+Les hyperparamètres et chemins peuvent être modifiés dans `config.py` :
+
+```python
+# Exemple : modifier le learning rate de LightGBM
+LGBM_PARAMS = {
+    'learning_rate': 0.01,  # Modifier ici
+    'n_estimators': 3000,
+    'num_leaves': 35,
+    # ...
+}
+```
+
+
+## Auteurs
+
+**Master 2 Mathématiques et Intelligence Artificielle - Université Paris-Saclay**
+
+- **Marcos Lahoz**
+- **Judith Le Roy**
+- **Bingjian Jiang**
+
+**Cours** : Apprentissage Supervisé et Data Challenge  
+**Date** : Novembre 2025
+
+## 📚 Références
+
+- Ke et al. (2017). *LightGBM: A Highly Efficient Gradient Boosting Decision Tree*. NeurIPS.
+- Prokhorenkova et al. (2018). *CatBoost: unbiased boosting with categorical features*. NeurIPS.
+- Wolpert (1992). *Stacked Generalization*. Neural Networks, 5(2):241-259.
+
+## License
+
+Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+---
