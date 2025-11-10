@@ -13,8 +13,6 @@ Projet réalisé dans le cadre du cours **Apprentissage Supervisé Avancé** du 
 
 ## Challenge 1 : Classification des réservations hôtelières
 
-### Problématique
-
 Dans le secteur hôtelier, les annulations et les no-show entraînent des pertes financières importantes. L'objectif est de prédire le statut final d'une réservation parmi 3 catégories :
 
 - **0** : Check-out (client s'est présenté)
@@ -23,8 +21,6 @@ Dans le secteur hôtelier, les annulations et les no-show entraînent des pertes
 
 
 ## Challenge 2 : Régression de la popularité Spotify
-
-### Problématique
 
 L'industrie musicale cherche à comprendre les facteurs de popularité d'un titre. L'objectif est de prédire la popularité Spotify (0-100) à partir des caractéristiques audio et métadonnées.
 
@@ -137,10 +133,7 @@ DATA-CHALLENGE-APPRENTISSAGE-SUPERVIS-/
 │   ├── feature_engineering.py
 │   ├── models.py
 │   └── config.py
-│
-├── rapport.pdf                    # Rapport détaillé (méthodologie + résultats)
-├── requirements.txt
-└── README.md
+│└── README.md
 ```
 
 ## Auteurs
