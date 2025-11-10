@@ -1,15 +1,13 @@
-# Data Challenge - Apprentissage Supervisé 🎯
+# Data Challenge - Apprentissage Supervisé 
 
 Projet réalisé dans le cadre du cours **Apprentissage Supervisé Avancé** du Master M2 Mathématiques et Intelligence Artificielle à l'Université Paris-Saclay (2025).
 
-## 📋 Table des matières
+## Table des matières
 
-- [Vue d'ensemble](#vue-densemble)
 - [Challenge 1 : Classification des réservations hôtelières](#challenge-1--classification-des-réservations-hôtelières)
 - [Challenge 2 : Régression de la popularité Spotify](#challenge-2--régression-de-la-popularité-spotify)
 - [Installation](#installation)
 - [Utilisation](#utilisation)
-- [Résultats](#résultats)
 - [Structure du projet](#structure-du-projet)
 - [Auteurs](#auteurs)
 
@@ -108,6 +106,40 @@ LGBM_PARAMS = {
     # ...
 }
 ```
+## Structure du projet 
+
+DATA-CHALLENGE-APPRENTISSAGE-SUPERVIS-/
+│
+├── classification/
+│   ├── data/
+│   │   ├── train_data.csv
+│   │   ├── test_data.csv
+│   │   └── naive_submission.csv
+│   ├── models/                    # Modèles entraînés (créé automatiquement)
+│   ├── processed/                 # Données pré-traitées (créé automatiquement)
+│   ├── train_base_models.py      # Entraînement des modèles L0
+│   ├── train_meta_model.py       # Entraînement du méta-modèle L1
+│   ├── predict_stacking.py       # Génération des prédictions finales
+│   ├── data_loader.py            # Chargement et nettoyage des données
+│   ├── feature_engineering.py    # Création de features
+│   ├── models.py                 # Définitions des modèles
+│   └── config.py                 # Configuration et hyperparamètres
+│
+├── regression/
+│   ├── data/
+│   ├── models/
+│   ├── processed/
+│   ├── train_base_models.py
+│   ├── train_meta_model.py
+│   ├── predict_stacking.py
+│   ├── data_loader.py
+│   ├── feature_engineering.py
+│   ├── models.py
+│   └── config.py
+│
+├── rapport.pdf                    # Rapport détaillé (méthodologie + résultats)
+├── requirements.txt
+└── README.md
 
 
 ## Auteurs
